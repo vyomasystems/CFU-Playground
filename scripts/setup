@@ -180,12 +180,6 @@ elif ! riscv64-unknown-elf-gcc --version | grep 'SiFive GCC 10.1.' >/dev/null; t
     echo "(or, preferably, use the Conda environment)."
 fi
 
-# Verify other dependencies
-
-if ! which vivado >/dev/null; then
-    echo -e "\e[0;31mInfo:\e[0;33m vivado not found in path.\e[m"
-fi
-
 # Regenerate .env file for VSCode
 (
     source "${CFU_ROOT}/environment"
